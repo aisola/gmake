@@ -1,0 +1,14 @@
+
+all {
+    go build -o autogmake main.go lang.go lexer.go parser.go;
+}
+
+clean { 
+    rm autogmake;
+}
+
+install {
+    git clone https://github.com/aisola/ObjectWeb.git;
+    cd ObjectWeb;
+    sudo python setup.py install;
+}
