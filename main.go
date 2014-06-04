@@ -8,15 +8,15 @@ import "os/exec"
 
 const (
 	help_text string = `
-    Usage: coreutil-template [OPTION]...
+    Usage: gmake [OPTION]...
     
-    A dummy template for the source of go-coreutils.
+    A very lightweight build tool.
 
           --help     display this help and exit
           --version  output version information and exit
     `
 	version_text = `
-    coreutil-template (go-coreutils) 0.1
+    gmake (aisola/gmake) 0.1
 
     Copyright (C) 2014 Abram C. Isola.
     This program comes with ABSOLUTELY NO WARRANTY; for details see
