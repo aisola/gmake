@@ -59,11 +59,10 @@ func main() {
 		os.Exit(0)
 
 	} else {
-
 		// get contents
 		buf, err := ioutil.ReadFile("GMakefile")
 		if err != nil {
-			fmt.Println(fmt.Errorf("gmake: %s", err))
+			fmt.Println("gmake: fatal: could not read GMakefile")
 			return
 		}
 
@@ -83,7 +82,7 @@ func main() {
 		} else {
 			dir = getDirective(args[0])
 			if dir == nil {
-				fmt.Printf("gmake: fatal: no '%s' directive defined", args[0])
+				fmt.Printf("gmake: fatal: no '%s' directive defined")
 				os.Exit(1)
 			}
 		}
